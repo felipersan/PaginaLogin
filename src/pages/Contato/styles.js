@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 
 export const Background = styled.div`
-  flex: 1;
-  width: 99rem;
-  margin-left: 2.93rem;
-  margin-top: 10rem;
-  height: 50rem;
+  flex: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ff6c22;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  
+  
 `
 export const Text = styled.h1`
   color: #fff;

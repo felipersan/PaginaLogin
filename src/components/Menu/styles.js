@@ -7,8 +7,7 @@ export const Background = styled.div`
   position: fixed;
   overflow: hidden;
 `
-export const Container = styled.div`
-  width: 14vw;
+export const Container = styled.div`  
   background-color: #fff;
   height: 100vh;
 `

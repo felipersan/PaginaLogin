@@ -4,20 +4,19 @@ export const Background = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  position: fixed;
-  overflow: hidden;
+  width: 100vw;
 `
-export const Menu = styled.div`
-  width: 14vw;
+export const Menu = styled.div`  
   background-color: #fff;
   height: 100vh;
 `
 
 export const Posts = styled.div`
   height: 100vh;
-  margin: 0;
-  width: 86vw;
+  padding-left: 48px;
+  padding-right: 64px;  
   background-color: #f3f3f3;
+  ;
 `
 
 export const Logo = styled.img`
@@ -40,15 +39,12 @@ export const Button = styled.button`
 `
 
 export const Header = styled.div`
-  height: 7rem;
-  width: 100%;
-  margin: 0;
-  position: absolute;
+  height: 7rem; 
+  margin: 0;   
 `
 
 export const UserEmail = styled.h2`
   font-size: 1.6rem;
-  padding-left: 2.93rem;
   color: #000;
   opacity: 0.4;
   font-weight: 400;
@@ -58,19 +54,17 @@ export const Component = styled.div`
   background-color: #000;
   opacity: 0.18;
   height: 1px;
-  width: 99rem;
-  margin-right: 2.95rem;
-  margin-left: 2.95rem;
-  position: absolute;
+   
   bottom: 0;
 `
 
 export const ArePosts = styled.div`
-  margin-top: 8.75rem;
-  margin-left: 2.95rem;
-  width: 99rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 14.25rem 14.25rem;
-  grid-gap: 1.31rem;
+  display : flex ;
+  flex-wrap: wrap;  
+  width: 100%;  
 `
+
+export const AreaPage = styled.div`
+height: 100%;
+width: 100%;
+`;

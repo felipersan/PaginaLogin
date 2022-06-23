@@ -7,6 +7,8 @@ export const Background = styled.div`
   border-radius: 8px;
   align-items: center;
   position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
 `
 export const Image = styled.img`
   width: 29rem;

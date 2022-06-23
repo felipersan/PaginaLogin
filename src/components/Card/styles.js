@@ -10,6 +10,7 @@ export const BackgroundOn = styled.div`
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   padding-left: 0.43rem;
+  
 `
 
 export const BackgroundOff = styled.div`
