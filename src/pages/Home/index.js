@@ -1,36 +1,30 @@
 import React, { useContext, useState } from "react";
 import { LoginContext } from "../../contexts/login";
 import ToLogin from "../../components/ToLogin";
-import Card from "../../components/Card";
-import Post from "../../components/Post";
 import Menu from "../../components/Menu";
 import Contato from "../../pages/Contato";
 import Relatorios from "../../pages/Relatórios";
+import Blog from "../Blog";
+import Header from "../../components/Header";
+import { useLocation } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 
-import {
-  Background,
-  Posts,
-  Logo,
-  Button,
-  AreaMenu,
-  Header,
-  Component,
-  UserEmail,
-  ArePosts,
-  AreaPage,
-} from "./styles";
+import { Background, Posts, AreaPage } from "./styles";
 
-export default function Home() {
+  export default function Home() {
   const { user } = useContext(LoginContext);
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState();
+ 
 
+  let location = useLocation();
+  console.log(location.pathname)
+  
   if (!user) {
     return <ToLogin />;
   }
 
-  console.log(page);
+  
 
   return (
     <Background>
@@ -40,28 +34,12 @@ export default function Home() {
         }}
       />
       <Posts>
-        <Header>
-          <UserEmail>
-            Ola <span style={{ fontWeight: "bold" }}>{user}</span>
-          </UserEmail>
-          <Component />
-        </Header>
-
-        {page === "home" && (
-          <ArePosts>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-          </ArePosts>
-        )}
-
-        {page === "contatos" && <ArePosts><Contato /></ArePosts>}
-        {page === "relatorios" && <Relatorios />}
-
-        
+        <Header />
+        <AreaPage>
+          {location.pathname === "home" && <Blog />}
+          {location.pathname === "contatos" && <Contato />}
+          {location.pathname === "relatórios" && <Relatorios />}
+        </AreaPage>
       </Posts>
     </Background>
   );

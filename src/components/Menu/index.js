@@ -16,6 +16,7 @@ export default function Menu({ setPageAtual }) {
     setContatos(false)
     setRelarorios(false)
     setPageAtual('home')
+    navigate("../home", { replace: true });
   }
 
   function handleContatos() {
@@ -23,13 +24,15 @@ export default function Menu({ setPageAtual }) {
     setInicio(false)
     setRelarorios(false)
     setPageAtual('contatos')
+    navigate("../Contato", { replace: true });
+
   }
 
   function handleRelatorios() {
     setRelarorios(true)
     setInicio(false)
     setContatos(false)
-    setPageAtual('relatorios')
+    setPageAtual('relatórios')
   }
 
   return (
